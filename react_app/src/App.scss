@@ -1,0 +1,320 @@
+@import 'styles/colors.scss';
+@import 'styles/fonts.scss';
+
+
+body {
+  background-color: black;
+  color: white;
+
+}
+a {
+  text-decoration: none;
+}
+.StartOver {
+  position: absolute;
+  top: 0%;
+}
+.Bigtext {
+  @include BeautifulBloom;
+  font-size: 150px;
+  position: absolute;
+  display: flex;
+  top: 34.2%;
+  width: 100vw;
+  justify-content: center;
+}
+
+.Middle {
+  //font-family: Avenir;
+  @include Avenir;
+  font-size: 24px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  top: 59%;
+  width: 100vw;
+  span{
+    padding: 0 10% 0 10%;
+  }
+}
+
+.Lower {
+  font-weight: 900;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 17%;
+  width: 100vw;
+}
+
+.ButtonRectangular {
+  color: white;
+  @include AvenirHeavy;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	height: 76px;
+	width: 238px;
+	border-radius: 38.44px;
+  background: linear-gradient(43.02deg, $blue 0%, $purple 100%);
+}
+
+.ButtonCircularContainer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ButtonCircular {
+  display: block;
+  position: relative;
+	height: 72px;
+	width: 72px;
+	background: linear-gradient(43.02deg, $blue 0%, $purple 100%);
+  border-radius: 100%;
+  b{
+    position: absolute;
+    transform: translate3d(-50%,75px,0);
+    text-align: center;
+    left: 50%;
+  }
+  img{
+    position: absolute;
+    width: 70%;
+    left: 10.8px;
+    top: 10.8px;
+  }
+}
+
+.Halo {
+  display: block;
+  transform: scale(0);
+  position: absolute;
+  transition: transform 300ms;
+  height: 187px;
+  width: 187px;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(43.02deg, $purple 0%, $blue 100%);
+  &.active{
+    transform: scale(1);
+  }
+}
+.HaloBlack{
+  background: black;
+  height: 187px;
+  width: 187px;
+  border-radius: 50%;
+}
+
+.haloItemContainer {
+  width: 200px;
+  height: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.haloItem {
+  display: flex;
+  position: relative;
+  font-size: 14px;
+  font-weight: 900;
+  height: 39px;
+  width: 120px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: linear-gradient(43.02deg, $blue 0%, $purple 100%);
+  .text {
+    z-index: 1;
+  }
+}
+.haloItemBlack{
+  position: absolute;
+  background: black;
+  height: calc(100% - 4px);
+  width: calc(100% - 4px);
+  border-radius: 20px;
+  &.active{
+      opacity: 0;
+  }
+
+}
+
+.sideleft{
+  position: absolute;
+  display: flex;
+  width: 300px;
+  height: 300px;
+  left: 0;
+  top: 34.2%;
+}
+.sideright{
+  position: absolute;
+  display: flex;
+  width: 300px;
+  height: 300px;
+  right: 0;
+  top: 34.2%;
+}
+
+.sideitem{
+  position: relative;
+  display: flex;
+  height: 100px;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Avenir;
+  font-size: 24px;
+  color: #FFF;
+  font-weight: 900;
+  b{
+    position: absolute;
+    width: 150px;
+    transform: translate3d(-50%,60px,0);
+    text-align: center;
+    left: 50%;
+  }
+}
+
+.sidecolorbox{
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  background-color: rgb(200,200,200);
+}
+
+.fadein{
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ProductSuggestionArea{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  .ProductSuggestionOuterContainer{
+    height: 205px;
+    width: 1413px;
+    overflow: hidden;
+    justify-content: space-between;
+    .ProductSuggestionInnerContainer{
+      width: 1413px;
+      top:0;
+      left: 0;
+      display: flex;
+      transform: translate3d(100%,0,0);
+      transition: transform 750ms cubic-bezier(0,0,0.25,1);
+
+      &.first{
+        transform: translate3d(0,0,0);
+      }
+    }
+  }
+}
+
+
+.ProductSuggestionContainer{
+  width: 395px;
+  height: 205px;
+  display: flex;
+  padding: 0 38px 0 38px;
+  bottom: 0;
+}
+
+.ProductSuggestionContainerContent{
+  width: 61%;
+  height: 100%;
+  background-color: #303131;
+  border-radius: 0 8px 8px 0;
+}
+
+.ProductSuggestionContainerContentInner{
+  width: 86%;
+  left: 7%;
+  top: 19px;
+  position: relative;
+  font-family: Avenir;
+  font-size: 24px;
+  b{
+    font-weight: 900;
+  }
+  p{
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.ProductPicture{
+  left: 0;
+  width: 39%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 8px 0 0 8px;
+}
+
+.BuyButton {
+  color: white;
+  position: relative;
+	height: 40px;
+	width: 100%;
+  display: flex;
+  font-size: 18px;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+	border-radius: 38.44px;
+  background: linear-gradient(43.02deg, $blue 0%, $purple 100%);
+}
+
+.SuggestionCategory{
+  width: auto;
+  height: 33px;
+  border-radius: 16.5px;
+  background: linear-gradient(43.02deg, $blue 0%, $purple 100%);
+  margin: 0 19px 0 19px;
+  b{
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 900;
+    position: relative;
+    padding: 0 20px 0 20px;
+    top: -3px;
+  }
+  img{
+    padding-right: 10px;
+  }
+}
+
+.Circle{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+}

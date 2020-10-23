@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+@font-face {
+  font-family: 'Beautiful Bloom';
+  //src: url('/src/fonts/BeautifulBloom-Alt.otf');
+  src: url('./fonts/BeautifulBloom-Alt.ttf') format('truetype'),
+      url('./fonts/BeautifulBloom-Alt.otf') format('opentype');
+}
+@mixin BeautifulBloom {
+  font-family: 'Beautiful Bloom';
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('./fonts/Avenir-Book.ttf') format('truetype');
+}
+@mixin Avenir {
+  font-family: 'Avenir';
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('./fonts/Avenir-Medium.ttf') format('truetype');
+}
+@mixin AvenirMedium {
+  font-family: 'Avenir Medium';
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Avenir Heavy';
+  src: url('./fonts/Avenir-Heavy.ttf') format('truetype');
+}
+@mixin AvenirHeavy {
+  font-family: 'Avenir Heavy';
+  font-weight: 900;
+}
